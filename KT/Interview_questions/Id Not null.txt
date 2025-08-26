@@ -1,0 +1,20 @@
+Id Not null
+
+Insert into divya value "null";
+
+create table student
+rollnum INTEGER,
+name VARCHAR(20),
+dept VARCHAR(10)
+
+1,'Anand','Mech'
+2,'Divya','ECE'
+3,'Sagar','CSE'
+4,'Sagar','Chem'
+
+select dept,max(rollnum) FROM student GROUP BY dept;
+
+select rollnum,count(rollnum) from student GROUP BY rollnum HAVING count(rollnum)>1; 
+
+select a.dept,b.dept from student a JOIN student b ON a.name=b.name;
+
